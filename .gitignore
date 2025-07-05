@@ -1,0 +1,30 @@
+# Compiled binaries and executables
+*.exe
+*.bin
+
+# Go module cache and build artifacts
+/bin/
+/pkg/
+/vendor/
+go.mod.bak
+go.sum.bak
+
+# Environment-specific configuration
+.env
+config.local.yaml
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Log files
+*.log
+
+settings.json
+
+rest-client/
+
+# Test-related files
+/testdata/
