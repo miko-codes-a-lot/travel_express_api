@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"cloudants/travel-express/helper"
 	"net/http"
 	"strconv"
 
@@ -34,7 +35,10 @@ func upsertRoute(c *gin.Context) {
 	}
 
 	var status = http.StatusOK
+	newRoute.UpdatedAt = helper.Now()
+
 	if c.Param("id") == "" {
+		newRoute.CreatedAt = helper.Now()
 		newRoute = *upsert(newRoute, nil)
 		status = http.StatusCreated
 	} else {
